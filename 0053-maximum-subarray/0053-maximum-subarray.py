@@ -4,10 +4,8 @@ class Solution:
         max_sum = -99999
         curr_sum = 0
         if len(nums)==1 and nums[0]<0:
-            return -1
-        if len(nums)==1 and nums[0]==0:
-            return 0
-        # nums.sort()
+            return nums[0]
+
         cnt = 0
         for num in nums:
             if num>0:
@@ -23,8 +21,6 @@ class Solution:
                 curr_sum = 0
             
             max_sum = max(curr_sum, max_sum)
-        # if max_sum == 0:
-        #     return -1
         
         return max_sum
         
